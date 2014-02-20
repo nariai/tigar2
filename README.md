@@ -9,15 +9,13 @@ Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Ya
 Submitted.
 
 <pre>
- Example: java -jar Tigar2.jar FASTA SAM OUT --alpha_zero DOUBLE --is_paired --polyA
+ Example: java -jar Tigar2.jar FASTA BAM OUT --alpha_zero DOUBLE --is_paired --polyA
  FASTA          : reference FASTA file
- SAM            : target SAM/BAM file
+ BAM            : target SAM/BAM file
  OUT            : output file
  --alpha_zero DOUBLE : tuning parameter alpha_zero
- --is_paired    : paired-end data. default = 0 (false). Please set 1, if sam
-                  file was generated from paired-end reads.
- --polyA BOOLEAN : polyA flag. default = 0 (false). Please set 1 if both read
-                  and reference sequences contain polyA tails.
+ --is_paired    : paired-end data. default = FALSE.
+ --polyA        : polyA flag. default = FALSE.
 </pre>
 
 ## Recommended pipeline to run TIGAR2
