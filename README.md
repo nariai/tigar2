@@ -2,19 +2,25 @@
 TIGAR2
 ======
 
+TIGAR2: sensitive and accurate transcript isoform abundance estimation with longer RNA-Seq reads
+
+Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Yamaguchi-Kabata, Masao Nagasaki
+
+Submitted.
+
 <pre>
- Example: java -jar Tigar.jar FASTA SAM OUT --alpha_zero DOUBLE --is_paired INT --polyA INT
+ Example: java -jar Tigar2.jar FASTA SAM OUT --alpha_zero DOUBLE --is_paired --polyA
  FASTA          : reference FASTA file
  SAM            : target SAM/BAM file
  OUT            : output file
  --alpha_zero DOUBLE : tuning parameter alpha_zero
- --is_paired INT  : paired-end data. default = 0 (false). Please set 1, if sam
+ --is_paired    : paired-end data. default = 0 (false). Please set 1, if sam
                   file was generated from paired-end reads.
- --polyA INT      : polyA flag. default = 0 (false). Please set 1 if both read
+ --polyA BOOLEAN : polyA flag. default = 0 (false). Please set 1 if both read
                   and reference sequences contain polyA tails.
 </pre>
 
-## Recommended pipeline to run TIGAR
+## Recommended pipeline to run TIGAR2
 
 Prepare cDNA reference sequences in FASTA format.
 
@@ -26,16 +32,22 @@ e.g.) mouse
 http://hgdownload.soe.ucsc.edu/goldenPath/mm9/bigZips/refMrna.fa.gz
 </pre>
 
-Build bowtie2 index
+Build FM-index for alignment
 
 <pre>
-bowtie2-build refMrna.fa ./ref/refMrna
+bwa index refMrna.fa
 </pre>
 
 Run bowtie2
 
+For single-end data
 <pre>
-bowtie2 -p 8 -k 1000 --very-sensitive ./ref/refMrna sample.fastq > sample.sam
+bwa mem -t 8 -P -L 10000 -a refMrna.fa sample.fastq > sample.sam
+</pre>
+
+For paired-end data
+<pre>
+bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sam
 </pre>
 
 Please note that sam files are expected to be sorted by read name.
@@ -43,14 +55,13 @@ In order to sort sam files by read name:
 
 <pre>
 samtools view -bS sample.sam > sample.bam
-samtools sort -n sample.bam sample.prefix
-samtools view -h sample.prefix.bam > sample_sorted.sam
+samtools sort -n sample.bam sample_sorted
 </pre>
 
 Run TIGAR
 
 <pre>
-java -jar Tigar.jar refMrna.fa sample_sorted.sam --alpha_zero 0.1 ./out/sample_out.txt
+java -jar Tigar2.jar refMrna.fa sample_sorted.bam --alpha_zero 0.1 sample_out.txt
 </pre>
 
 Output format
@@ -83,5 +94,5 @@ Naoki Nariai<br>
 Contact:<br>
 nariai [at] megabank.tohoku.ac.jp
 
-Last updated on 2014/02/05
+Last updated on 2014/02/20
 
