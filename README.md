@@ -9,7 +9,7 @@ Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Ya
 Submitted.
 
 <pre>
- Example: java -jar Tigar2.jar FASTA BAM OUT --alpha_zero DOUBLE --is_paired --polyA
+ Example: java -jar Tigar2.jar FASTA BAM OUT --alpha_zero DOUBLE --is_paired
  FASTA          : reference FASTA file
  BAM            : target SAM/BAM file
  OUT            : output file
