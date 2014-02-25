@@ -9,13 +9,16 @@ Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Ya
 Submitted.
 
 <pre>
- Example: java -jar Tigar2.jar FASTA BAM OUT --alpha_zero DOUBLE --is_paired
- FASTA          : reference FASTA file
- BAM            : target SAM/BAM file
- OUT            : output file
+ Example: java -jar Tigar2.jar FASTA BAM OUT --alpha_zero DOUBLE --is_paired --frag_dist_mean DOUBLE --frag_dist_std --read_len_dist PATH
+ FASTA           : reference FASTA file
+ BAM             : target SAM/BAM file
+ OUT             : output file
  --alpha_zero DOUBLE : tuning parameter alpha_zero
- --is_paired    : paired-end data. default = FALSE.
- --polyA        : polyA flag. default = FALSE.
+ --is_paired     : paired-end data. default = FALSE.
+ --polyA         : polyA flag. default = FALSE.
+ --frag_dist_mean: mean of the fragment length distribution.
+ --frag_dist_std : standard deviation of the fragment length distribution.
+ --read_len_dist : distribution of the read length distribution.
 </pre>
 
 ## Recommended pipeline to run TIGAR2
