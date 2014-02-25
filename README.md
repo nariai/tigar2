@@ -9,7 +9,7 @@ Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Ya
 Submitted.
 
 <pre>
-Usage: java -jar Tigar2.jar FASTA BAM OUT --alpha_zero DOUBLE --is_paired --frag_dist_mean DOUBLE --frag_dist_std --read_len_dist PATH
+Usage: java -jar Tigar2.jar FASTA BAM OUT
  
  FASTA           : reference FASTA file
  BAM             : target SAM/BAM file
