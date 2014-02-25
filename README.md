@@ -10,9 +10,13 @@ Submitted.
 
 <pre>
  Example: java -jar Tigar2.jar FASTA BAM OUT --alpha_zero DOUBLE --is_paired --frag_dist_mean DOUBLE --frag_dist_std --read_len_dist PATH
+ 
  FASTA           : reference FASTA file
  BAM             : target SAM/BAM file
  OUT             : output file
+ 
+ Options:
+ 
  --alpha_zero DOUBLE : tuning parameter alpha_zero
  --is_paired     : paired-end data. default = FALSE.
  --polyA         : polyA flag. default = FALSE.
