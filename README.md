@@ -86,11 +86,11 @@ THETA: estimated parameter (transcript abundance), essentially Z divided by tota
 Please note that the current implementation of TIGAR requires large memory size for large sam/bam files.
 For large sam/bam files, please specify:
 <pre>
-java -Xmx16g -Xms16g FASTA SAM OUT --alpha_zero DOUBLE --is_paired INT --polyA INT
+e.g.) java -Xmx16g -Xms16g FASTA SAM OUT --alpha_zero 0.1
 </pre>
 or, ideally
 <pre>
-java -Xmx32g -Xms32g FASTA SAM OUT --alpha_zero DOUBLE --is_paired INT --polyA INT
+e.g.) java -Xmx32g -Xms32g FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
 This site is maintained by:
