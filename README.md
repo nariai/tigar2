@@ -6,7 +6,7 @@ TIGAR2: sensitive and accurate estimation of transcript isoform expression with 
 
 Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Yamaguchi-Kabata, Masao Nagasaki
 
-Submitted.
+<it>Submitted.</it>
 
 <pre>
 Usage: java -jar Tigar2.jar FASTA BAM OUT
