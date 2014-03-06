@@ -44,7 +44,7 @@ Build FM-index for alignment
 bwa index refMrna.fa
 </pre>
 
-Run bowtie2
+Run BMA-MEM
 
 For single-end data
 <pre>
