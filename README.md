@@ -2,7 +2,7 @@
 TIGAR2
 ======
 
-TIGAR2: sensitive and accurate transcript isoform abundance estimation with longer RNA-Seq reads
+TIGAR2: sensitive and accurate estimation of transcript isoform expression with longer RNA-Seq reads
 
 Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Yamaguchi-Kabata, Masao Nagasaki
 
