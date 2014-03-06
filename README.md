@@ -82,11 +82,12 @@ FPKM: normalized expression level (Fragments Per Kilobase of exon per Million ma
 THETA: estimated parameter (transcript abundance), essentially Z divided by total mapped reads.
 </pre>
 
-Please note that the current implementation of TIGAR requires large memory size for large sam/bam files.
-For large sam/bam files, please specify:
+Please note that the current implementation of TIGAR2 might requir large memory size for large sam/bam files.
+In such cases, please specify:
 <pre>
 e.g.) java -Xmx16g -Xms16g FASTA SAM OUT --alpha_zero 0.1
 e.g.) java -Xmx32g -Xms32g FASTA SAM OUT --alpha_zero 0.1
+e.g.) java -Xmx64g -Xms64g FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
 This site is maintained by:
