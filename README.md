@@ -22,7 +22,6 @@ Usage: java -jar Tigar2.jar FASTA BAM OUT
  --polyA         : polyA flag. default = FALSE.
  --frag_dist_mean: mean of the fragment length distribution.
  --frag_dist_std : standard deviation of the fragment length distribution.
- --read_len_dist : distribution of the read length distribution.
 </pre>
 
 ## Recommended pipeline to run TIGAR2
@@ -99,5 +98,5 @@ Naoki Nariai<br>
 Contact:<br>
 nariai [at] megabank.tohoku.ac.jp
 
-Last updated on 2014/02/20
+Last updated on 2014/03/06
 
