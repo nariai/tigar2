@@ -8,7 +8,7 @@ Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Ya
 
 *Submitted*.
 
-Please download the jar file by clicking <b>download ZIP</b> on the right panel.
+Please download the jar file by clicking <b>Download ZIP</b> on the right panel.
 
 <pre>
 Usage: java -jar Tigar2.jar FASTA BAM OUT
