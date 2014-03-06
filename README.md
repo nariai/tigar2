@@ -86,9 +86,6 @@ Please note that the current implementation of TIGAR requires large memory size 
 For large sam/bam files, please specify:
 <pre>
 e.g.) java -Xmx16g -Xms16g FASTA SAM OUT --alpha_zero 0.1
-</pre>
-or, ideally
-<pre>
 e.g.) java -Xmx32g -Xms32g FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
