@@ -28,7 +28,7 @@ Usage: java -jar Tigar2.jar FASTA BAM OUT
 
 ## Recommended pipeline to run TIGAR2
 
-Prepare cDNA reference sequences in FASTA format.
+<b>1. Prepare cDNA reference sequences in FASTA format.</b>
 
 <pre>
 e.g.) human
