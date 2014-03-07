@@ -56,19 +56,19 @@ For paired-end data
 bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sam
 </pre>
 
-Please note that sam files are expected to be sorted by read name.
-In order to sort sam files by read name:
-
-<pre>
-samtools view -bS sample.sam > sample.bam
-samtools sort -n sample.bam sample_sorted
-</pre>
 
 Run TIGAR
 
+For single-end data
 <pre>
-java -jar Tigar2.jar refMrna.fa sample_sorted.bam --alpha_zero 0.1 sample_out.txt
+java -jar Tigar2.jar refMrna.fa sample.bam --alpha_zero 0.1 sample_out.txt
 </pre>
+
+For paired-end data
+<pre>
+java -jar Tigar2.jar refMrna.fa sample.bam --is_paired --alpha_zero 0.1 sample_out.txt
+</pre>
+
 
 Output format
 
@@ -91,6 +91,15 @@ e.g.) java -Xmx16g -Xms16g FASTA SAM OUT --alpha_zero 0.1
 e.g.) java -Xmx32g -Xms32g FASTA SAM OUT --alpha_zero 0.1
 e.g.) java -Xmx64g -Xms64g FASTA SAM OUT --alpha_zero 0.1
 </pre>
+
+Please also note that sam files are expected to be sorted by read name.
+In order to sort sam files by read name:
+
+<pre>
+samtools view -bS sample.sam > sample.bam
+samtools sort -n sample.bam sample_sorted
+</pre>
+
 
 This site is maintained by:
 Naoki Nariai<br>
