@@ -22,8 +22,8 @@ Usage: java -jar Tigar2.jar FASTA BAM OUT
  --alpha_zero DOUBLE : tuning parameter alpha_zero
  --is_paired     : paired-end data. default = FALSE.
  --polyA         : polyA flag. default = FALSE.
- --frag_dist_mean: mean of the fragment length distribution.
- --frag_dist_std : standard deviation of the fragment length distribution.
+ --frag_dist_mean DOUBLE: mean of the fragment length distribution. default = estimation from data
+ --frag_dist_std DOUBLE:  standard dev of the fragment length distribution. default = estimation from data
 </pre>
 
 ## Recommended pipeline to run TIGAR2
