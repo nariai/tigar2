@@ -57,7 +57,7 @@ bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sa
 </pre>
 
 
-<b>4. Run TIGAR</b>
+<b>4. Run TIGAR2</b>
 
 For single-end data
 <pre>
@@ -70,7 +70,7 @@ java -jar Tigar2.jar refMrna.fa sample.bam --is_paired --alpha_zero 0.1 sample_o
 </pre>
 
 
-Output format
+<b>Output format</b>
 
 <pre>
 ID: transcript (mRNA) ID that the program predicted
