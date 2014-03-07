@@ -38,13 +38,13 @@ e.g.) mouse
 http://hgdownload.soe.ucsc.edu/goldenPath/mm9/bigZips/refMrna.fa.gz
 </pre>
 
-Build FM-index for alignment
+<b>2. Build FM-index for alignment</b>
 
 <pre>
 bwa index refMrna.fa
 </pre>
 
-Run BMA-MEM
+<b>3. Run BMA-MEM</b>
 
 For single-end data
 <pre>
@@ -57,7 +57,7 @@ bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sa
 </pre>
 
 
-Run TIGAR
+<b>4. Run TIGAR</b>
 
 For single-end data
 <pre>
