@@ -48,7 +48,7 @@ bwa index refMrna.fa
 
 For single-end data
 <pre>
-bwa mem -t 8 -P -L 10000 -a refMrna.fa sample.fastq > sample.sam
+bwa mem -t 8 -L 10000 -a refMrna.fa sample.fastq > sample.sam
 </pre>
 
 For paired-end data
