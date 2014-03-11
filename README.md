@@ -11,10 +11,10 @@ Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Ya
 Please download the jar file by clicking <b>Download ZIP</b> on the right panel.
 
 <pre>
-Usage: java -jar Tigar2.jar FASTA BAM OUT
+Usage: java -jar Tigar2.jar FASTA SAM OUT
  
  FASTA           : reference FASTA file
- BAM             : target SAM/BAM file
+ SAM             : target SAM/BAM file
  OUT             : output file
  
  Options:
@@ -61,12 +61,12 @@ bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sa
 
 For single-end data
 <pre>
-java -jar Tigar2.jar refMrna.fa sample.bam --alpha_zero 0.1 sample_out.txt
+java -jar Tigar2.jar refMrna.fa sample.sam --alpha_zero 0.1 sample_out.txt
 </pre>
 
 For paired-end data
 <pre>
-java -jar Tigar2.jar refMrna.fa sample.bam --is_paired --alpha_zero 0.1 sample_out.txt
+java -jar Tigar2.jar refMrna.fa sample.sam --is_paired --alpha_zero 0.1 sample_out.txt
 </pre>
 
 
