@@ -87,9 +87,9 @@ THETA: estimated parameter (transcript abundance), essentially Z divided by tota
 Please note that the current implementation of TIGAR2 might requir large memory size for large sam/bam files.
 In such cases, please specify:
 <pre>
-e.g.) java -Xmx16g -Xms16g FASTA SAM OUT --alpha_zero 0.1
-e.g.) java -Xmx32g -Xms32g FASTA SAM OUT --alpha_zero 0.1
-e.g.) java -Xmx64g -Xms64g FASTA SAM OUT --alpha_zero 0.1
+e.g.) java -Xmx16g -Xms16g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
+e.g.) java -Xmx32g -Xms32g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
+e.g.) java -Xmx64g -Xms64g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
 Please also note that sam files are expected to be sorted by read name.
