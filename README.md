@@ -11,10 +11,10 @@ Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Ya
 Please download the jar file by clicking <b>Download ZIP</b> on the right panel.
 
 <pre>
-Usage: java -jar Tigar2.jar FASTA BAM OUT
+Usage: java -jar Tigar2.jar FASTA SAM OUT
  
  FASTA           : reference FASTA file
- BAM             : target SAM/BAM file
+ SAM             : target SAM/BAM file
  OUT             : output file
  
  Options:
@@ -48,7 +48,7 @@ bwa index refMrna.fa
 
 For single-end data
 <pre>
-bwa mem -t 8 -P -L 10000 -a refMrna.fa sample.fastq > sample.sam
+bwa mem -t 8 -L 10000 -a refMrna.fa sample.fastq > sample.sam
 </pre>
 
 For paired-end data
@@ -61,12 +61,12 @@ bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sa
 
 For single-end data
 <pre>
-java -jar Tigar2.jar refMrna.fa sample.bam --alpha_zero 0.1 sample_out.txt
+java -jar Tigar2.jar refMrna.fa sample.sam --alpha_zero 0.1 sample_out.txt
 </pre>
 
 For paired-end data
 <pre>
-java -jar Tigar2.jar refMrna.fa sample.bam --is_paired --alpha_zero 0.1 sample_out.txt
+java -jar Tigar2.jar refMrna.fa sample.sam --is_paired --alpha_zero 0.1 sample_out.txt
 </pre>
 
 
@@ -87,9 +87,9 @@ THETA: estimated parameter (transcript abundance), essentially Z divided by tota
 Please note that the current implementation of TIGAR2 might requir large memory size for large sam/bam files.
 In such cases, please specify:
 <pre>
-e.g.) java -Xmx16g -Xms16g FASTA SAM OUT --alpha_zero 0.1
-e.g.) java -Xmx32g -Xms32g FASTA SAM OUT --alpha_zero 0.1
-e.g.) java -Xmx64g -Xms64g FASTA SAM OUT --alpha_zero 0.1
+e.g.) java -Xmx16g -Xms16g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
+e.g.) java -Xmx32g -Xms32g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
+e.g.) java -Xmx64g -Xms64g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
 Please also note that sam files are expected to be sorted by read name.
