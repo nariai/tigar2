@@ -92,20 +92,11 @@ e.g.) java -Xmx32g -Xms32g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 e.g.) java -Xmx64g -Xms64g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
-Please also note that sam files are expected to be sorted by read name.
-In order to sort sam files by read name:
-
-<pre>
-samtools view -bS sample.sam > sample.bam
-samtools sort -n sample.bam sample_sorted
-</pre>
-
-
 This site is maintained by:
 Naoki Nariai<br>
 <br>
 Contact:<br>
 nariai [at] megabank.tohoku.ac.jp
 
-Last updated on 2014/03/06
+Last updated on 2014/03/31
 
