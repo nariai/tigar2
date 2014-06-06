@@ -38,24 +38,24 @@ e.g.) mouse
 http://hgdownload.soe.ucsc.edu/goldenPath/mm9/bigZips/refMrna.fa.gz
 </pre>
 
-<b>2. Build FM-index for alignment</b>
+<b>2. Build bowtie2 index</b>
 
 <pre>
-bwa index refMrna.fa
+mkdir ref
+bowtie2-build refMrna.fa ./ref/refMrna
 </pre>
 
-<b>3. Run BMA-MEM</b>
+<b>3. Run bowtie2</b>
 
 For single-end data
 <pre>
-bwa mem -t 8 -L 10000 -a refMrna.fa sample.fastq > sample.sam
+bowtie2 -p 8 -k 100 --very-sensitive ./ref/refMrna sample.fastq > sample.sam
 </pre>
 
 For paired-end data
 <pre>
-bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sam
+bowtie2 -p 8 -k 100 --very-sensitive ./ref/refMrna -1 sample_1.fastq -2 sample_2.fastq > sample.sam
 </pre>
-
 
 <b>4. Run TIGAR2</b>
 
@@ -68,7 +68,6 @@ For paired-end data
 <pre>
 java -jar Tigar2.jar refMrna.fa sample.sam --is_paired --alpha_zero 0.1 sample_out.txt
 </pre>
-
 
 <b>Output format</b>
 
@@ -92,11 +91,41 @@ e.g.) java -Xmx32g -Xms32g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 e.g.) java -Xmx64g -Xms64g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
+Please note that sam files are expected to be sorted by read name.
+In order to sort sam files by read name (e.g. from bam files that are already sorted by position):
+
+<pre>
+samtools view -bS sample.sam > sample.bam
+samtools sort -n sample.bam sample.prefix
+samtools view -h sample.prefix.bam > sample_sorted.sam
+</pre>
+
+You can also choose BWA-MEM as an aligner as follows:
+
+<b>2. Build FM-index for alignment</b>
+
+<pre>
+bwa index refMrna.fa
+</pre>
+
+<b>3. Run BMA-MEM</b>
+
+For single-end data
+<pre>
+bwa mem -t 8 -L 10000 -a refMrna.fa sample.fastq > sample.sam
+</pre>
+
+For paired-end data
+<pre>
+bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sam
+</pre>
+
+
 This site is maintained by:
 Naoki Nariai<br>
 <br>
 Contact:<br>
 nariai [at] megabank.tohoku.ac.jp
 
-Last updated on 2014/03/31
+Last updated on 2014/06/06
 
