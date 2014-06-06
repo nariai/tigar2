@@ -85,7 +85,7 @@ THETA: estimated parameter (transcript abundance), essentially Z divided by tota
 
 <b>5. Visualization</b>
 
-You can visualize the estimated alignment by IGV as follows:
+You can visualize the optimized alignment by TIGAR2 as follows:
 
 <pre>
 samtools sort sample_opt.bam sample_opt_sorted
