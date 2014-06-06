@@ -83,6 +83,18 @@ FPKM: normalized expression level (Fragments Per Kilobase of exon per Million ma
 THETA: estimated parameter (transcript abundance), essentially Z divided by total mapped reads.
 </pre>
 
+<b>5. Visualization</b>
+
+You can visualize the estimated alignment by IGV as follows:
+
+<pre>
+samtools sort sample_opt.bam sample_opt_sorted
+samtools index sample_opt_sorted.bam
+</pre>
+
+Please start IGV_2.3.14 or later, and load refMrna.fa as Genome, and sample_opt_sorted.bam.
+You can look at the optimized alignment of reads on each transcript isoform.
+
 Please note that the current implementation of TIGAR2 might requir large memory size for large sam/bam files.
 In such cases, please specify:
 <pre>
@@ -119,6 +131,8 @@ For paired-end data
 <pre>
 bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sam
 </pre>
+
+You can run TIGAR2 exactly the same as described above.
 
 
 This site is maintained by:
