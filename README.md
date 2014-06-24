@@ -95,7 +95,7 @@ samtools index sample_opt_sorted.bam
 Please start IGV_2.3.14 or later, and load refMrna.fa as Genome, and sample_opt_sorted.bam.
 You can look at the optimized alignment of reads on each transcript isoform.
 
-Please note that the current implementation of TIGAR2 might requir large memory size for large sam/bam files.
+Please note that the current implementation of TIGAR2 might require large memory size for large sam/bam files.
 In such cases, please specify:
 <pre>
 e.g.) java -Xmx16g -Xms16g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
@@ -104,12 +104,11 @@ e.g.) java -Xmx64g -Xms64g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
 Please note that sam files are expected to be sorted by read name.
-In order to sort sam files by read name (e.g. from bam files that are already sorted by position):
+In order to sort sam files by read name (e.g. from bam files that are already sorted by chr,position):
 
 <pre>
 samtools view -bS sample.sam > sample.bam
-samtools sort -n sample.bam sample.prefix
-samtools view -h sample.prefix.bam > sample_sorted.sam
+samtools sort -n sample.bam sample.name.sorted
 </pre>
 
 You can also choose BWA-MEM as an aligner as follows:
@@ -141,5 +140,5 @@ Naoki Nariai<br>
 Contact:<br>
 nariai [at] megabank.tohoku.ac.jp
 
-Last updated on 2014/06/06
+Last updated on 2014/06/24
 
