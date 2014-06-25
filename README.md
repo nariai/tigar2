@@ -136,11 +136,13 @@ bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sa
 You can run TIGAR2 exactly the same as described above.
 
 
+<hr>
+
 This site is maintained by:
 Naoki Nariai<br>
 <br>
 Contact:<br>
 nariai [at] megabank.tohoku.ac.jp
 
-Last updated on 2014/06/24
+Last updated on 2014/06/25
 
