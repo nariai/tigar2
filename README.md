@@ -95,7 +95,7 @@ samtools index sample_opt_sorted.bam
 Please start IGV_2.3.14 or later, and load refMrna.fa as Genome, and sample_opt_sorted.bam.
 You can look at the optimized alignment of reads on each transcript isoform.
 
-<h>
+<hr>
 
 Please note that the current implementation of TIGAR2 might require large memory size for large sam/bam files.
 In such cases, please specify:
@@ -135,7 +135,6 @@ bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sa
 
 You can run TIGAR2 exactly the same as described above.
 
-<h>
 
 This site is maintained by:
 Naoki Nariai<br>
