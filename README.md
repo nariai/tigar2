@@ -88,7 +88,7 @@ THETA: estimated parameter (transcript abundance), essentially Z divided by tota
 You can visualize the optimized alignment by TIGAR2 as follows:
 
 <pre>
-samtools sort sample_opt.bam sample_opt_sorted
+samtools sort sample_out.txt.opt.bam sample_opt_sorted
 samtools index sample_opt_sorted.bam
 </pre>
 
@@ -135,7 +135,6 @@ bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sa
 
 You can run TIGAR2 exactly the same as described above.
 
-
 <hr>
 
 This site is maintained by:
@@ -144,5 +143,5 @@ Naoki Nariai<br>
 Contact:<br>
 nariai [at] megabank.tohoku.ac.jp
 
-Last updated on 2014/06/25
+Last updated on 2014/07/08
 
