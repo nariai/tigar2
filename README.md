@@ -105,13 +105,9 @@ e.g.) java -Xmx32g -Xms32g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 e.g.) java -Xmx64g -Xms64g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
-Please note that sam files are expected to be sorted by read name.
-In order to sort sam files by read name (e.g. from bam files that are already sorted by chr,position):
 
-<pre>
-samtools view -bS sample.sam > sample.bam
-samtools sort -n sample.bam sample.name.sorted
-</pre>
+<b>* Please DO NOT sort sam files by position.</b>
+<br>
 
 You can also choose BWA-MEM as an aligner as follows:
 
