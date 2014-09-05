@@ -106,8 +106,6 @@ e.g.) java -Xmx64g -Xms64g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
 
-<b><font color=red>* Please DO NOT sort sam files by position.</font></b>
-<br>
 
 You can also choose BWA-MEM as an aligner as follows:
 
@@ -129,7 +127,11 @@ For paired-end data
 bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sam
 </pre>
 
-You can run TIGAR2 exactly the same as described above.
+<br>
+* Please DO NOT sort sam files by position.
+<br>
+
+Then, you can run TIGAR2 exactly the same as described above.
 
 <hr>
 
