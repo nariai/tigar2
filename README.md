@@ -106,7 +106,7 @@ e.g.) java -Xmx64g -Xms64g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 </pre>
 
 
-<b>* Please DO NOT sort sam files by position.</b>
+<b><font color=red>* Please DO NOT sort sam files by position.</font></b>
 <br>
 
 You can also choose BWA-MEM as an aligner as follows:
