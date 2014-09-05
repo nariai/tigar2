@@ -128,10 +128,10 @@ bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sa
 </pre>
 
 <br>
-* Please DO NOT sort sam files by position.
+<b>Please DO NOT sort sam files by position.</b>
 <br>
 
-Then, you can run TIGAR2 exactly the same as described above.
+Then, you can run TIGAR2 exactly the same as the way described previously.
 
 <hr>
 
@@ -141,5 +141,5 @@ Naoki Nariai<br>
 Contact:<br>
 nariai [at] megabank.tohoku.ac.jp
 
-Last updated on 2014/07/08
+Last updated on 2014/09/05
 
