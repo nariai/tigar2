@@ -142,7 +142,7 @@ Bioinformatics, 29(18):2292-9 (2013).
 
 Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Yamaguchi-Kabata and Masao Nagasaki
 TIGAR2: sensitive and accurate estimation of transcript isoform expression with longer RNA-Seq reads.
-Accepted, (2014).
+Accepted for publication, (2014).
 </pre>
 
 This site is maintained by:
