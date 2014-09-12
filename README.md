@@ -134,6 +134,11 @@ bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sa
 Then, you can run TIGAR2 exactly the same as the way described previously.
 
 <hr>
+<b>References</b>
+Naoki Nariai, Osamu Hirose, Kaname Kojima, Masao Nagasaki.
+TIGAR: transcript isoform abundance estimation method with gapped alignment of RNA-Seq data by variational Bayesian inference.
+Bioinformatics, 29(18):2292-9 (2013).
+
 
 This site is maintained by:
 Naoki Nariai<br>
