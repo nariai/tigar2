@@ -135,10 +135,11 @@ Then, you can run TIGAR2 exactly the same as the way described previously.
 
 <hr>
 <b>References</b>
+<pre>
 Naoki Nariai, Osamu Hirose, Kaname Kojima, Masao Nagasaki.
 TIGAR: transcript isoform abundance estimation method with gapped alignment of RNA-Seq data by variational Bayesian inference.
 Bioinformatics, 29(18):2292-9 (2013).
-
+</pre>
 
 This site is maintained by:
 Naoki Nariai<br>
