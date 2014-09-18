@@ -129,7 +129,7 @@ bwa mem -t 8 -P -L 10000 -a refMrna.fa sample_1.fastq sample_2.fastq > sample.sa
 </pre>
 
 <br>
-<b>Please DO NOT sort sam files by position.</b>
+<b>Please DO NOT sort sam files</b>
 <br>
 
 Then, you can run TIGAR2 exactly the same as the way described previously.
