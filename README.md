@@ -103,19 +103,20 @@ In such cases, please specify:
 e.g.) java -Xmx16g -Xms16g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 e.g.) java -Xmx32g -Xms32g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
 e.g.) java -Xmx64g -Xms64g -jar Tigar2.jar FASTA SAM OUT --alpha_zero 0.1
+
 </pre>
 
 
 
 You can also choose BWA-MEM as an aligner as follows:
 
-<b>2. Build FM-index for alignment</b>
+<b>* Build FM-index for BWA-MEM alignment</b>
 
 <pre>
 bwa index refMrna.fa
 </pre>
 
-<b>3. Run BMA-MEM</b>
+<b>* Run BMA-MEM</b>
 
 For single-end data
 <pre>
