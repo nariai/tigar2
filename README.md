@@ -6,7 +6,7 @@ TIGAR2: sensitive and accurate estimation of transcript isoform expression with 
 
 Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Yamaguchi-Kabata and Masao Nagasaki
 
-BMC Genomics, *accepted* (2014).
+*BMC Genomics, accepted* (2014).
 
 Please download the jar file by clicking <b>Download ZIP</b> on the right panel.
 
@@ -142,7 +142,7 @@ Bioinformatics, 29(18):2292-9 (2013).
 
 Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Yamaguchi-Kabata and Masao Nagasaki
 TIGAR2: sensitive and accurate estimation of transcript isoform expression with longer RNA-Seq reads.
-Accepted for publication, (2014).
+BMC Genomics, accepted (2014).
 </pre>
 
 This site is maintained by:
