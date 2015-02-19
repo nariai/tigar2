@@ -8,8 +8,8 @@ Naoki Nariai, Kaname Kojima, Takahiro Mimori, Yukuto Sato, Yosuke Kawai, Yumi Ya
 
 *BMC Genomics*, 15(Suppl 10):S5 (2014).
 
-<b>Latest news</b>
-Feb 19, 2015 - TIGAR2.1 is released. Now multi-threading is available.
+<b>Latest news</b><br>
+Feb 19, 2015: TIGAR2.1 is released. Multi-threading is available.<br>
 
 Please download the jar file by clicking <b>Download ZIP</b> on the right panel.
 
