@@ -84,7 +84,7 @@ Z: the number of expected fragments that the program assigned to the transcript
 
 FPKM: normalized expression level (Fragments Per Kilobase of exon per Million mapped fragments)
 
-THETA: estimated parameter (transcript abundance), essentially Z divided by total mapped reads.
+THETA: estimated parameter (transcript abundance), essentially Z divided by total fragments.
 </pre>
 
 <b>5. Visualization</b>
