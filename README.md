@@ -53,12 +53,12 @@ bowtie2-build refMrna.fa ./ref/refMrna
 
 For single-end data
 <pre>
-bowtie2 -p 8 -k 100 --very-sensitive ./ref/refMrna sample.fastq > sample.sam
+bowtie2 -p 8 -k 100 --very-sensitive -x ./ref/refMrna sample.fastq > sample.sam
 </pre>
 
 For paired-end data
 <pre>
-bowtie2 -p 8 -k 100 --very-sensitive ./ref/refMrna -1 sample_1.fastq -2 sample_2.fastq > sample.sam
+bowtie2 -p 8 -k 100 --very-sensitive -x ./ref/refMrna -1 sample_1.fastq -2 sample_2.fastq > sample.sam
 </pre>
 
 <b>4. Run TIGAR2</b>
@@ -156,5 +156,5 @@ Naoki Nariai<br>
 Contact:<br>
 nariai [at] megabank.tohoku.ac.jp
 
-Last updated on 2015/02/19
+Last updated on 2016/06/30
 
